@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(120deg, #e2c35d, #d88771);
+    color: white;
+    font-family: "poppins", sans-serif;
+    min-height: 100vh;
+}
+
+header {
+    font-size: 1.5rem;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    background: white;
+}
+
+form button {
+    color: #d88771;
+    background: white;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+form button:hover {
+    background-color: #d88771;
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: 0.5rem;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-button,
+.complete-button {
+    background-color: #ff6447;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-button {
+    background-color: rgb(73, 204, 73);
+}
+
+.todo-item {
+    padding: 0rem 1rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background-image: none;
+}
+
+.select {
+    margin: 1rem;
+    background-color: #ff6f47;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    transition: 0.3s ease all;
+}
+
+select {
+    color: #ff6f47;
+    height: 100%;
+    padding: 1rem;
+    width: 10rem;
+    cursor: pointer;
+    font-family: "poppins", sans-serif;
+}
+
+.fa-caret-down {
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease all;
+}
+
+.caret-down-container {
+    background-color: #ff6f47;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.select:hover .caret-down-container {
+    background-color: white;
+}
+
+.select:hover .fa-caret-down {
+    color: #ff6f47;
+}
